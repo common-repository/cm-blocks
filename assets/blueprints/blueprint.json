@@ -1,0 +1,26 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "steps": [
+    {
+      "step": "login"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "cm-blocks"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "importFile",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/codemanas/demo-content/main/cm-blocks-demo.xml"
+      }
+    }
+  ],
+  "landingPage": "/?page_id=98"
+}
